@@ -1,0 +1,2 @@
+module SearchListHelper
+end
