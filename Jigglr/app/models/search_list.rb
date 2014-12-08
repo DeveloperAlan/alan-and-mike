@@ -1,6 +1,7 @@
 class SearchList < ActiveRecord::Base
   belongs_to :user
 
-  has_many :categories, :products
+  has_many :categories
+  has_many :products
 
 end

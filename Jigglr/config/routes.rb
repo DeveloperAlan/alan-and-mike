@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :search_list
+
   root 'search_list#index'
 
 
