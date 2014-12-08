@@ -1,14 +1,227 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jigglr</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BootTest</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+        <%= link_to "jiggler", search_lists_path, class: "navbar-brand" %>
+      </a>
+    </div>
+  </div>
+</nav>
 
-<%= yield %>
+<div class="container" style="padding-top: 60px;">
+  <h1 class="page-header">Edit Profile</h1>
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block well well-sm">
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+      <div class="alert alert-info alert-dismissable">
+        <a class="panel-close close" data-dismiss="alert">×</a> 
+        <i class="fa fa-coffee"></i>
+        This is an <strong>.alert</strong>. Use this to show important messages to the user.
+      </div>
+      <h3>Personal info</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-lg-3 control-label">First name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Jane" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Last name:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="Bishop" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Company:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Email:</label>
+          <div class="col-lg-8">
+            <input class="form-control" value="janesemail@gmail.com" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-3 control-label">Time Zone:</label>
+          <div class="col-lg-8">
+            <div class="ui-select">
+              <select id="user_time_zone" class="form-control">
+                <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                <option value="Alaska">(GMT-09:00) Alaska</option>
+                <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                <option value="Arizona">(GMT-07:00) Arizona</option>
+                <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Username:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="janeuser" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Confirm password:</label>
+          <div class="col-md-8">
+            <input class="form-control" value="11111122333" type="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <input class="btn btn-primary" value="Save Changes" type="button">
+            <span></span>
+            <input class="btn btn-default" value="Cancel" type="reset">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+ <!-- Order Categories -->
+
+   <h1 class="page-header">Categories</h1>
+  <div class="panel panel-default panel-order">
+    <div class="panel-heading">
+      <strong>Order history</strong>
+      <div class="btn-group pull-right">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+          Filter history <i class="fa fa-filter"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">Active orders</a></li>
+            <li><a href="#">Pending orders</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-1"><img src="http://lorempixel.com/200/200/cats/1" class="media-object"></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right"><i class="fa fa-certificate"></i> pending</div>
+              <span><strong>The order name</strong></span>
+              <span class="label label-info">group name</span>
+              <br>
+              <span>Quantity: 4</span>
+              <br>
+              <span>Cost: $20,522.52</span>
+            </div>
+            <div class="col-md-12">
+              order made on: 05/30/2014 by <a href="#">The Best EU Deals </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><img src="http://lorempixel.com/200/200/cats/2" class="media-object"></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right"><i class="fa fa-certificate"></i> pending</div>
+              <span><strong>The order name</strong></span>
+              <span class="label label-info">group name</span>
+              <br>
+              <span>Quantity: 7</span>
+              <br>
+              <span>Cost: $2,922.79</span>
+            </div>
+            <div class="col-md-12">
+              order made on: 03/10/2013 by <a href="#">The Best EU Deals </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><img src="http://lorempixel.com/200/200/cats/3" class="media-object"></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-certificate"></i> approve</a></div>
+              <span><strong>The order name</strong></span>
+              <span class="label label-info">group name</span>
+              <br>
+              <span>Quantity: 10</span>
+              <br>
+              <span>Cost: $2,422.52</span>
+            </div>
+            <div class="col-md-12">
+              order made on: 07/16/2014 by <a href="#">The Best EU Deals </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><img src="http://lorempixel.com/200/200/cats/4" class="media-object"></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right"><a href="#" class="btn btn-primary btn-xs"><i class="fa fa-certificate"></i> approve</a></div>
+              <span><strong>The order name</strong></span>
+              <span class="label label-info">group name</span>
+              <br>
+              <span>Quantity: 5</span>
+              <br>
+              <span>Cost: $7,651.85</span>
+            </div>
+            <div class="col-md-12">
+              order made on: 02/07/2014 by <a href="#">The Best EU Deals </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <ul class="pagination">
+        <li class="active"><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>    
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
