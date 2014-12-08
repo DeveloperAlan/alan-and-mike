@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Category.delete_all
+SearchList.delete_all
+
+categories = Category.create(name: 'LOL', description: 'LOL is an awesome present category')
+search_lists = SearchList.create
