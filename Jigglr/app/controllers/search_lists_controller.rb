@@ -3,7 +3,6 @@ before_action :find_searchlist, only: [:show, :edit]
   def index
     if @searchlist == !nil
       @searchlist = SearchList.first
-
       redirect_to @searchlist
     else 
     end
@@ -18,9 +17,7 @@ before_action :find_searchlist, only: [:show, :edit]
 
 def create
     @searchlist = SearchList.new(searchlist_params)
-
     if @searchlist.save
-
       redirect_to @searchlist
     else
       render :new
