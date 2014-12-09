@@ -82,6 +82,8 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    rebay (1.2.0)
+      json
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
@@ -126,6 +128,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.8)
+  rebay
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
