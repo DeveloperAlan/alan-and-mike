@@ -1,4 +1,11 @@
 <h1>SearchLists#index</h1>
 <p>Find me in app/views/search_lists/index.html.erb</p>
 
-<%= link_to "New Search List", new_search_list_path %>
+<% if user_signed_in? && :search_list? %>
+<p><%= link_to "Edit Search List", edit_search_list_path %></p>
+<% elsif user_signed_in? && !:search_list? %>
+<p><%= link_to "New Search List", new_search_list_path %></p>
+<% else %>
+<p>Welcome to Jigglr. Click on Sign up to sign up</p>
+<% end %>
+

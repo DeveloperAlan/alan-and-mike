@@ -10,4 +10,10 @@ Category.delete_all
 SearchList.delete_all
 
 categories = Category.create(name: 'LOL', description: 'LOL is an awesome present category')
-search_lists = SearchList.create
+# search_lists = SearchList.create
+
+User.create({
+  email: 'info@example.com',
+  password: 'password',
+  password_confirmation: 'password'
+  })

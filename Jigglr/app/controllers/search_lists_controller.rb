@@ -1,5 +1,7 @@
 class SearchListsController < ApplicationController
+before_action :find_searchlist, only: [:edit]
   def index
+
   end
 
   def new
