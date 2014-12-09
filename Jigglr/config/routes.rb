@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   get 'search_lists/index'
 
   devise_for :users
 
   resources :search_lists, :categories, :users, :wishlists, :products
 
-  root 'search_lists#index'
+  root 'welcome#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
