@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :search_lists, :categories
+  resources :search_lists, :categories, :users, :wishlists, :products
 
   root 'search_lists#index'
 
