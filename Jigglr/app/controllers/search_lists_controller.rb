@@ -1,7 +1,15 @@
 class SearchListsController < ApplicationController
-before_action :find_searchlist, only: [:edit]
+before_action :find_searchlist, only: [:show, :edit]
   def index
+    if @searchlist == !nil
+      @searchlist = SearchList.first
 
+      redirect_to @searchlist
+    else 
+    end
+  end
+
+  def show
   end
 
   def new
@@ -11,11 +19,13 @@ before_action :find_searchlist, only: [:edit]
 def create
     @searchlist = SearchList.new(searchlist_params)
 
-    if @SearchList.save
+    if @searchlist.save
+
       redirect_to @searchlist
     else
       render :new
     end
+
   end
 
   def edit
@@ -37,13 +47,12 @@ def create
   private
 
   def find_searchlist
-    @searchlist = searchlist.find(params[:id])
+    @searchlist = SearchList.find(params[:id])
   end
 
   def searchlist_params
-    params.require(:searchlist).permit(
+    params.require(:search_list).permit(
       :name,
-      
     )
   end
 end
