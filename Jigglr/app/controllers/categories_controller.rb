@@ -46,6 +46,7 @@ def create
   def category_params
     params.require(:category).permit(
       :name,
+      :eBay_id
     )
   end
 end
