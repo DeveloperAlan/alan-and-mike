@@ -9,7 +9,9 @@
 Category.delete_all
 SearchList.delete_all
 
-categories = Category.create(name: 'LOL', description: 'LOL is an awesome present category')
+videogames = Category.create(name: 'Video Games', description: "LOOL", eBay_id: "1249")
+videogames.save
+
 search_lists = SearchList.create
 
 User.create({

@@ -13,6 +13,8 @@ before_action :find_searchlist, only: [:show, :edit]
 
   def new
     @searchlist = SearchList.new
+    categories = Rebay::Finding.new
+    @videogames = categories.find_items_by_category({:categoryId => "#1249"})
   end 
 
 def create
