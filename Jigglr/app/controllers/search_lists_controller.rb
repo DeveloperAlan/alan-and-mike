@@ -50,7 +50,7 @@ def create
   end
 
   def searchlist_params
-    params.require(:search_list).permit(
+    params.require(:searchlist).permit(
       :name,
     )
   end
