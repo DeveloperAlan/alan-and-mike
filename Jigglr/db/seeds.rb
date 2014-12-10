@@ -9,8 +9,6 @@
 Category.delete_all
 SearchList.delete_all
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-
 
 antiques = Category.create(name: 'Antiques', eBay_id: "20081")
 antiques.save
@@ -48,56 +46,65 @@ computers.save
 consumer_electronics = Category.create(name: 'Consumer Electronics', eBay_id: "1249")
 consumer_electronics.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+crafts = Category.create(name: 'Crafts', eBay_id: "14339")
+crafts.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+dolls = Category.create(name: 'Dolls', eBay_id: "237")
+dolls.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+dvds = Category.create(name: 'DVDs', eBay_id: "11232")
+dvds.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+entertainment_memorabilia = Category.create(name: 'Entertainment Memorabilia', eBay_id: "45100")
+entertainment_memorabilia.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+everything_else = Category.create(name: 'Everythint Else', eBay_id: "99")
+everything_else.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+gift_cards = Category.create(name: 'Health and Beauty', eBay_id: "26395")
+gift_cards.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+home_garden = Category.create(name: 'Home and Garden', eBay_id: "11700")
+home_garden.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+jewellery = Category.create(name: 'Jewellery', eBay_id: "281")
+jewellery.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+music = Category.create(name: 'Video Games', eBay_id: "11233")
+music.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+musical_instruments = Category.create(name: 'Musical Instruments', eBay_id: "619")
+musical_instruments.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+pet_supplies = Category.create(name: 'Pet Supplies', eBay_id: "1281")
+pet_supplies.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+pottery_glass = Category.create(name: 'Pottery and Glass', eBay_id: "870")
+pottery_glass.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+real_estate = Category.create(name: 'Real Estate', eBay_id: "10542")
+real_estate.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+specialty_services = Category.create(name: 'Specialty Services', eBay_id: "316")
+specialty_services.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+sporting_goods = Category.create(name: 'Sporting Goods', eBay_id: "888")
+sporting_goods.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+stamps = Category.create(name: 'Stamps', eBay_id: "260")
+stamps.save
 
-videogames = Category.create(name: 'Video Games', eBay_id: "1249")
-videogames.save
+tickets_experiences = Category.create(name: 'Tickets and Experiences', eBay_id: "1305")
+tickets_experiences.save
+
+toys_hobbies = Category.create(name: 'Toys and Hobbies', eBay_id: "220")
+toys_hobbies.save
+
+travel = Category.create(name: 'Travel', eBay_id: "3252")
+travel.save
+
+video_games = Category.create(name: 'video_games', eBay_id: "1249")
+video_games.save
 
 
 search_lists = SearchList.create

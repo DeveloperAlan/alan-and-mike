@@ -1,0 +1,14 @@
+<%= form_for @wishlist do |f| %>
+<div class="form_field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<div class="form_field">
+  <%= f.label :eBay_id %>
+  <%= f.text_field :eBay_id %>
+</div>
+<div class="form_field">
+  <%= f.submit %>
+</div>
+
+<% end %>
