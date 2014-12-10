@@ -3,3 +3,6 @@
 <p>
   <%= @category.eBay_id %>
 </p>
+
+<p><%= link_to "Edit Category", edit_category_path %></p>
+<p><%= link_to "Delete Category", @category, method: :delete, data: { confirm: "Are you sure?" }%></p>
