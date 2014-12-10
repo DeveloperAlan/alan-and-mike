@@ -1,10 +1,13 @@
 <%= form_for @searchlist do |f| %>
 
 <ul>
+<% @categories = Category.all %>
+<% @categories.each do |category| %>
   <li>
-    <%= check_box_tag Category.find(1)%> 
-    <%= label_tag Category.find(1).name %>
+    <%= check_box_tag category.id%> 
+    <%= label_tag category.name %>
   </li>
+<% end %>
 </ul>
 
 <div class="form_field">
