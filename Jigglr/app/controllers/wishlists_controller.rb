@@ -29,7 +29,7 @@ def create
 
   def destroy
     @wishlist.destroy
-    redirect_to categories_path
+    redirect_to wishlists_path
   end
 
   private
