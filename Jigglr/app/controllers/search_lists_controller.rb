@@ -52,6 +52,7 @@ def create
   def searchlist_params
     params.require(:searchlist).permit(
       :name,
+      :category_id
     )
   end
 end
