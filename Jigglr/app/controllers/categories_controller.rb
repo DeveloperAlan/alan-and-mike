@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+before_action :find_category, only: [:show]
+
 def index
   end
 
@@ -15,6 +17,9 @@ def create
       render :new
     end
   end
+
+  def show 
+  end 
 
   def edit
   end
@@ -35,7 +40,7 @@ def create
   private
 
   def find_category
-    @category = category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def category_params
