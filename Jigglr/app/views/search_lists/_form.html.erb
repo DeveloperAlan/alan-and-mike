@@ -1,13 +1,20 @@
 <%= form_for @searchlist do |f| %>
-<div class="form_field">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-</div>
+
+
+</div><table>
+  <tr>
+    <td> <%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td>
+    <td><%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td> 
+    <td><%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td>
+  </tr>
+  <tr>
+    <td><%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td>
+    <td><%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td> 
+    <td><%= check_box_tag Category.first.name %> <%= label_tag Category.first.name %></td>
+  </tr>
+</table>
 <div class="form_field">
   <%= f.submit %>
-</div>
-<div class="form_field">
-<p>  <%= Category.first.name %></p>
-</div>
 
 <% end %>
+
