@@ -4,7 +4,17 @@
 
 <h1><%= @searchlist.name %></h1>
 
-<% @results.each do |result| %>
-<% result_url = result["viewItemURL"] %>
-<p><%=link_to result["title"], result_url %></p>
-<% end %>
+<table>
+  <% @results.each do |result| %>
+  <tr> 
+  <% 3.times do |i| %>
+    <td>
+    <% result_url = result["viewItemURL"] %>
+    <% result_image = result["galleryURL"] %>
+    <%= link_to image_tag("#{result_image}"), result_url %>
+    <%=link_to result["title"].truncate(40), result_url %>
+    </td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
