@@ -7,10 +7,14 @@ before_action :do_rebay, only: [:show]
   end
 
   def show
-    eBay_id = @searchlist.categories.find(1).eBay_id
-    @finder = Rebay::Finding.new
-    @response = @finder.find_items_by_category({:categoryId => eBay_id})
-    @results = @response.response["searchResult"]["item"]
+    @searchlist_cat = @searchlist.categories
+    @searchlist_cat.each do |category|
+      @eBay_id = category.eBay_id
+      @finder = Rebay::Finding.new
+      @response = @finder.find_items_by_category({:categoryId => @eBay_id})
+      @results = @response.response["searchResult"]["item"]
+    end
+
   end
 
   def new
