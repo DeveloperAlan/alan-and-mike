@@ -1,4 +1,4 @@
 class ProductWishlists < ActiveRecord::Base
-  has_many :products 
-  has_many :wishlists
+  belongs_to :products 
+  belongs_to :wishlists
 end

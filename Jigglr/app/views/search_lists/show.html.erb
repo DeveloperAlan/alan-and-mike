@@ -1,2 +1,10 @@
+<%= link_to "Edit Search List", edit_search_list_path %>
+<p><%= link_to "Delete Search List", @searchlist, method: :delete, data: { confirm: "Are you sure?" }%></p>
+
 <h1><%= @searchlist.name %></h1>
-<p><%= @searchlist.category_id %></p>
+
+<% @results.each do |result| %>
+<% result_url = result["viewItemURL"] %>
+<p><%=link_to result["title"], result_url %></p>
+<% end %>
+<h1><%= @results[1]%></h1>

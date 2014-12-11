@@ -1,27 +1,24 @@
 class SearchListsController < ApplicationController
-before_action :find_searchlist, only: [:show, :edit]
+before_action :find_searchlist, only: [:show, :edit, :destroy, :update]
 before_action :do_rebay, only: [:show]
   def index
-    if @searchlist == !nil
-      @searchlist = SearchList.first
-      redirect_to @searchlist
-    else 
-    end
+    @searchlists = SearchList.all
+    
   end
 
   def show
-
+    eBay_id = @searchlist.categories.find(1).eBay_id
+    @finder = Rebay::Finding.new
+    @response = @finder.find_items_by_category({:categoryId => eBay_id})
+    @results = @response.response["searchResult"]["item"]
   end
 
   def new
     @searchlist = SearchList.new
-    categories = Rebay::Finding.new
   end 
 
 def create
     @searchlist = SearchList.new(searchlist_params)
-
-
     if @searchlist.save
       redirect_to @searchlist
     else
@@ -34,6 +31,7 @@ def create
   end
 
   def update
+    @searchlist = SearchList.update(searchlist_params)
     if @searchlist.update(searchlist_params)
       redirect_to @searchlist
     else
@@ -43,7 +41,7 @@ def create
 
   def destroy
     @searchlist.destroy
-    redirect_to searchlists_path
+    redirect_to search_lists_path
   end
 
   private
