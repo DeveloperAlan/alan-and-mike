@@ -1,5 +1,6 @@
 class SearchListsController < ApplicationController
 before_action :find_searchlist, only: [:show, :edit]
+before_action :do_rebay, only: [:show]
   def index
     if @searchlist == !nil
       @searchlist = SearchList.first
@@ -9,6 +10,7 @@ before_action :find_searchlist, only: [:show, :edit]
   end
 
   def show
+
   end
 
   def new
@@ -18,7 +20,6 @@ before_action :find_searchlist, only: [:show, :edit]
 
 def create
     @searchlist = SearchList.new(searchlist_params)
-    @ca
     if @searchlist.save
       redirect_to @searchlist
     else
@@ -44,13 +45,16 @@ def create
   end
 
   private
+  def do_rebay
+    finding = Rebay::Finding.new
+  end
 
   def find_searchlist
     @searchlist = SearchList.find(params[:id])
   end
 
   def searchlist_params
-    params.require(:searchlist).permit(
+    params.require(:search_list).permit(
       :name,
       :category_id
     )

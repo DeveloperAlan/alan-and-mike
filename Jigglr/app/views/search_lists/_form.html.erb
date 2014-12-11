@@ -1,5 +1,11 @@
+<% require "pry" %>
+
 <%= form_for @searchlist do |f| %>
 
+<div class="form_field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
 <ul>
 <% @categories = Category.all %>
 <% @categories.each do |category| %>
