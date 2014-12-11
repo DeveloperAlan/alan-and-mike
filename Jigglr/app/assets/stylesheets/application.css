@@ -16,12 +16,17 @@
 
 /* universal */
 
+
+
 html {
   overflow-y: scroll;
 }
 
 body {
   padding-top: 80px;
+  background-image: url("/assets/jpeg.jpg"); 
+  background-attachment: cover;
+
 }
 
 section {
@@ -32,17 +37,32 @@ textarea {
   resize: vertical;
 }
 
+label {
+  padding-left: 10px;
+}
+
+ul,input {
+  padding-right: 20px;
+}
+
 .jumbotron {
   min-height: 500px;
+  background: rgba(7, 44, 63, 0.5); 
+
+}
+.jumbotron h2, {
+  line-height: 1;
+  color: #FFF;
 }
 
 .jumbotron h1 {
   font-size: 3em;
-  letter-spacing: -2px;
   margin-bottom: 30px;
-
+  color: #FFF;
 }
-
+.jumbotron p {
+  font-size: 1.2em;
+}
 .center {
   text-align: center;
 }
@@ -52,14 +72,30 @@ textarea {
 }
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h3 {
   line-height: 1;
+  color: #CAE0FC !important;
+}
+a {
+  color: #FFF;
+}
+.checkboxes {
+  color: #FFF;
+}
+a:hover {
+  color: #CAE0FC;
+  text-decoration: none;
+  background: transparent;
 }
 
+nav a:hover
+{
+  background: transparent;
+}
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
   margin-bottom: 30px;
+
 }
 
 h2 {
@@ -87,11 +123,28 @@ p {
   font-weight: bold;
 }
 
+.logobig {
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
 .logo:hover {
   color: #fff;
   text-decoration: none;
 }
 
+.navbar-fixed-top {
+  margin-top: 10px
+}
+
+a.navbar-brand hover {
+  background: transparent;
+}
 /* footer */
 
 footer {
@@ -176,9 +229,10 @@ footer ul li {
     margin-bottom: 0;
 }
 
-.row yelp_wrapper
+.wrapper
 {
-  
+  margin-right: 100px;
+  text-align: center;
 }
 
 .cell {
@@ -207,5 +261,28 @@ footer ul li {
 .myButton:active {
   position:relative;
   top:1px;
+}
+
+.wrapper a {
+  text-align: center;
+}
+
+/* Buttons
+================================= */
+
+.btn-default {
+  border-width: 2px;
+  border: solid 1px #FFF;
+  padding: 12px 22px;
+  background: transparent;
+  color: #CAE0FC;
+}
+.btn-default:hover {
+  background: rgba(7, 44, 63, 0.5); 
+  color: #004AAB;
+  border-color: #fff;
+}
+.btn:active {
+  box-shadow: none;
 }
 

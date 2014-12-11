@@ -1,8 +1,9 @@
 <%= form_for @searchlist do |f| %>
 
-<div class="form_field">
+<div class="form-group">
   <%= f.label :name %>
   <%= f.text_field :name %>
+
 </div>
 
 <div class="row">
@@ -14,8 +15,5 @@
 </div>
 
 <div class="form-group">
-  <%= f.submit class: "btn btn-lg btn-primary"  %>
-
+  <%= f.submit class: "btn btn-lg btn-default"  %>
 <% end %>
-
-
