@@ -106,9 +106,6 @@ travel.save
 video_games = Category.create(name: 'video_games', eBay_id: "1249")
 video_games.save
 
-
-search_lists = SearchList.create
-
 User.create({
   email: 'info@example.com',
   password: 'password',
