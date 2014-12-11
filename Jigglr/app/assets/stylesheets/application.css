@@ -36,6 +36,13 @@ textarea {
   min-height: 500px;
 }
 
+.jumbotron h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+
+}
+
 .center {
   text-align: center;
 }
@@ -50,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
 }
