@@ -1,3 +1,6 @@
+<%= link_to "Edit Wishlist", edit_wishlist_path %>
+<%= link_to  "Delete Wishlist", @wishlist, method: :delete, data: { confirm: "Are you sure?"} %>
+
 <div class="jumbotron">
-  show.html.erb
+  <%=  @wishlist.name%>
 </div>

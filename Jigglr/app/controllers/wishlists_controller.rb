@@ -1,12 +1,15 @@
 class WishlistsController < ApplicationController
-def index
+before_action :find_wishlist, only: [:show, :destroy]
+
+  def index
+    @wishlist = Wishlist.all
   end
 
   def new
     @wishlist = Wishlist.new
   end 
 
-def create
+  def create
     @wishlist = Wishlist.new(wishlist_params)
 
     if @wishlist.save
@@ -15,6 +18,11 @@ def create
       render :new
     end
   end
+
+  def show
+    @product = Product.new
+  end 
+
 
   def edit
   end
@@ -35,7 +43,7 @@ def create
   private
 
   def find_wishlist
-    @wishlist = wishlist.find(params[:id])
+    @wishlist = Wishlist.find(params[:id])
   end
 
   def wishlist_params

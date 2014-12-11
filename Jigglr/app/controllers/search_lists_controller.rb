@@ -1,6 +1,6 @@
 class SearchListsController < ApplicationController
 before_action :find_searchlist, only: [:show, :edit, :destroy, :update]
-before_action :do_rebay, only: [:show]
+
   def index
     @searchlists = SearchList.all
     
@@ -49,9 +49,7 @@ def create
   end
 
   private
-  def do_rebay
-    finding = Rebay::Finding.new
-  end
+
 
   def find_searchlist
     @searchlist = SearchList.find(params[:id])

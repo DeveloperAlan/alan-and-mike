@@ -12,6 +12,7 @@
     <% result_image = result["galleryURL"] %>
     <%= link_to image_tag("#{result_image}"), result_url %>
     <%=link_to result["title"].truncate(40), result_url %>
+    
     </td>
   </div>
   <% end %>
