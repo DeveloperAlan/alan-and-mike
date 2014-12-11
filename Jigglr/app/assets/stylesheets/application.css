@@ -18,15 +18,11 @@
 
 
 
-html {
-  overflow-y: scroll;
-}
 
 body {
   padding-top: 80px;
   background-image: url("/assets/jpeg.jpg"); 
-  background-attachment: cover;
-
+  background-attachment: fixed;
 }
 
 section {

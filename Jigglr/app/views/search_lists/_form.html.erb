@@ -9,7 +9,7 @@
 <div class="row">
   <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b|%>
   <div class="col-md-4">
-  <td><div class="myButton"><%= b.label { b.check_box + b.text } %></div></p>
+  <td><div class="btn-lg btn-default"><%= b.label { b.check_box + b.text } %></div></p>
   </div>
   <% end %>
 </div>
