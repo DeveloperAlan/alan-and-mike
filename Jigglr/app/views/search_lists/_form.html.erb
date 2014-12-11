@@ -1,5 +1,3 @@
-<% require "pry" %>
-
 <%= form_for @searchlist do |f| %>
 
 <div class="form_field">
@@ -7,13 +5,7 @@
   <%= f.text_field :name %>
 </div>
 <ul>
-<% @categories = Category.all %>
-<% @categories.each do |category| %>
-  <li>
-    <%= check_box_tag category.id%> 
-    <%= label_tag category.name %>
-  </li>
-<% end %>
+  <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%>
 </ul>
 
 <div class="form_field">

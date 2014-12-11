@@ -20,6 +20,8 @@ before_action :do_rebay, only: [:show]
 
 def create
     @searchlist = SearchList.new(searchlist_params)
+
+
     if @searchlist.save
       redirect_to @searchlist
     else
@@ -56,7 +58,8 @@ def create
   def searchlist_params
     params.require(:search_list).permit(
       :name,
-      :category_id
+      category_ids: []
     )
   end
+
 end
