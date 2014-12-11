@@ -4,13 +4,9 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
-<ul>
-  <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%>
-</ul>
+<ul><div><%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%></div></ul>
 
 <div class="form-group">
-  <%= f.submit class: "btn btn-lg btn-primary"  %>
+  <%= f.submit class: "btn btn-lg btn-primary" %>
 
 <% end %>
-
-
