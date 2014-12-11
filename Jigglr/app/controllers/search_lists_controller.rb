@@ -35,7 +35,6 @@ def create
   end
 
   def update
-    @searchlist = SearchList.update(searchlist_params)
     if @searchlist.update(searchlist_params)
       redirect_to @searchlist
     else

@@ -20,7 +20,6 @@ before_action :find_wishlist, only: [:show, :destroy]
   end
 
   def show
-    @product = Product.new
   end 
 
 

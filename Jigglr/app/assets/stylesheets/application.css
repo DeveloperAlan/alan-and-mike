@@ -274,6 +274,8 @@ footer ul li {
   padding: 12px 22px;
   background: transparent;
   color: #CAE0FC;
+  overflow: auto;
+  text-align: center;
 }
 .btn-default:hover {
   background: rgba(7, 44, 63, 0.5); 
