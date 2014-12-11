@@ -1,12 +1,13 @@
 <%= form_for @searchlist do |f| %>
 
-<div class="form_field">
+<div class="form-group">
   <%= f.label :name %>
   <%= f.text_field :name %>
-</div>
-<ul><div><%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%></div></ul>
+</div><br>
+
+<div class"checkboxes col-md-2"><%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)%></div><br>
 
 <div class="form-group">
-  <%= f.submit class: "btn btn-lg btn-primary" %>
+  <%= f.submit class: "btn btn-lg btn-default" %>
 
 <% end %>

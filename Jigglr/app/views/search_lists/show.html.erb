@@ -1,18 +1,20 @@
 
-<%= link_to "Edit Search List", edit_search_list_path %>
-<p><%= link_to "Delete Search List", @searchlist, method: :delete, data: { confirm: "Are you sure?" }%></p>
+  <div class="jumbotron">
+<span class="btn-xs btn-default col-md-2"><%= link_to "Edit Search List", edit_search_list_path %></span>
+<span class="btn-xs btn-default col-md-2 col-md-offset-1"><%= link_to "Delete Search List", @searchlist,  method: :delete, data: { confirm: "Are you sure?" } %></span><br><br>
 
 <h1><%= @searchlist.name %></h1>
 
-<div class="row">
+<div class="row wrapper">
   <% @results.each do |result| %>
-  <div class="col-md-4 panel panel-warning">
+  <div class="col-md-2 col-md-offset-1">
     <td>
     <% result_url = result["viewItemURL"] %>
     <% result_image = result["galleryURL"] %>
     <%= link_to image_tag("#{result_image}"), result_url %>
-    <%=link_to result["title"].truncate(40), result_url %>
-    
+
+    <%=link_to result["title"].truncate(20), result_url %>
+
     </td>
   </div>
   <% end %>
