@@ -1,7 +1,61 @@
-<div class="center jumbotron">
+<div class="container">
 
 <h1>Wish List</h1><br>
 
 <%= link_to 'New Wish List', new_wishlist_path, class: "btn btn-lg btn-primary" %>
 
+
+<div style="padding-top: 60px;">
+  <div class="panel panel-default panel-order">
+    <div class="panel-heading">
+      <strong>Results</strong>
+      <div class="btn-group pull-right">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+          Filter history <i class="fa fa-filter"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">Active orders</a></li>
+            <li><a href="#">Pending orders</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-1"><img src="#" class="media-object"></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-right"><i class="fa fa-certificate"></i> pending</div>
+              <span><strong>The order name</strong></span>
+              <span class="label label-info">group name</span>
+              <br>
+              <span>Quantity: 4</span>
+              <br>
+              <span>Cost: $20,522.52</span>
+            </div>
+            <div class="col-md-12">
+              order made on: 05/30/2014 by <a href="#">The Best EU Deals </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="panel-footer">
+      <ul class="pagination">
+        <li class="active"><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
