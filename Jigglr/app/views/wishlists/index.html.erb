@@ -1,4 +1,36 @@
-<h1>Wish List</h1>
+<div class="container">
 
-<%= link_to 'New Wish List', new_wishlist_path %>
+<h1>Wish List</h1><br>
 
+<%= link_to 'New Wish List', new_wishlist_path, class: "btn btn-lg btn-primary" %>
+
+<div style="padding-top: 60px;">
+  <div class="panel panel-default panel-order">
+    <div class="panel-heading">
+      <strong>Results</strong>
+      <div class="btn-group pull-right">
+        <div class="btn-group">
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-1"><%= image_tag "galleryURL" %></div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-12">
+              <span><strong><%= "title" %></strong></span>
+              <br>
+              <span><%= "description" %></span>
+              <br>
+              <span><%= "currentPrice" %></span>
+            </div>
+            <div class="col-md-12">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

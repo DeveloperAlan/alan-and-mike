@@ -1,7 +1,11 @@
-<h1>Category List</h1>
+<div class="center jumbotron">
 
-<%= link_to 'New Category', new_category_path %>
+<h1>Category List</h1><br>
+
+<%= link_to 'New Category', new_category_path, class: "btn btn-lg btn-primary" %>
 
 <% @categories.each do |category| %>
   <p><%= link_to category.name, category %></p>
 <% end %>
+
+</div>
