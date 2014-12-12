@@ -42,8 +42,14 @@ ul,input {
 }
 
 .jumbotron {
-  min-height: 500px;
+  height: auto;
   background: rgba(7, 44, 63, 0.5); 
+}
+
+.jumbotron1 {
+  height: auto;
+  background: rgba(7, 44, 63, 0.5); 
+  position: relative;
 }
 .jumbotron h2, {
   line-height: 1;
@@ -103,6 +109,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  color: white;
 }
 
 /* header */
@@ -131,10 +138,6 @@ p {
 .logo:hover {
   color: #fff;
   text-decoration: none;
-}
-
-.navbar-fixed-top {
-  margin-top: 10px
 }
 
 a.navbar-brand hover {
@@ -284,5 +287,9 @@ footer ul li {
 }
 .btn:active {
   box-shadow: none;
+}
+
+.mr-middle {
+  text-align: center;
 }
 

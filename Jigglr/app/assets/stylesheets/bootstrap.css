@@ -19,7 +19,6 @@ details,
 figcaption,
 figure,
 footer,
-header,
 hgroup,
 main,
 nav,
@@ -27,6 +26,16 @@ section,
 summary {
   display: block;
 }
+
+header
+{
+    height:50px;
+    background: black;
+    opacity: 0.9;
+    margin:0px auto;
+    display: block;
+}
+
 audio,
 canvas,
 progress,
@@ -3024,7 +3033,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
-  border: 1px solid transparent;
+
 }
 @media (min-width: 768px) {
   .navbar {
@@ -3065,10 +3074,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-fixed-top .navbar-collapse,
   .navbar-static-top .navbar-collapse,
-  .navbar-fixed-bottom .navbar-collapse {
+  .navbar-fixed-bottom .navbar-collapse,
+  .navbar-fixed-top1 .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
   }
+
+
+.navbar-fixed-top1
+  { 
+  margin-top: 20px;
+}
 }
 .container > .navbar-header,
 .container-fluid > .navbar-header,
@@ -3096,7 +3112,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-fixed-top,
-.navbar-fixed-bottom {
+.navbar-fixed-bottom
+ {
   position: fixed;
   right: 0;
   left: 0;
@@ -3109,6 +3126,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+.navbar-fixed-top1 {
   top: 0;
   border-width: 0 0 1px;
 }
