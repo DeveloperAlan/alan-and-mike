@@ -243,6 +243,9 @@ footer ul li {
   margin-right: 100px;
   text-align: center;
 }
+.btn-xs {
+  padding: 1px;
+}
 
 .cell {
   max-width: 250px;
@@ -257,8 +260,8 @@ footer ul li {
   cursor: pointer;
   border-radius: 2px;
   padding: 10px;
-  border-style: solid;
-  border-color: white;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, .2);
 }
 
 .myButton {

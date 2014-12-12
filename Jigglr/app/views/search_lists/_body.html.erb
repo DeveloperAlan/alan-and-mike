@@ -9,7 +9,7 @@
     <p><%= link_to image_tag("#{result_image}", height: '100px'), result_url %></p>
     <p><%=link_to result["title"].truncate(40), result_url %></p>
     <p><%= "$" + result["sellingStatus"]["currentPrice"]["__value__"] %>
-    <div class="btn-xs btn-default" style="font-size:16px"<%=link_to "Save to Wishlist", nil  %></p></div>
+    <div class="btn-xs btn-primary" style="font-size:16px"<%=link_to "Save to Wishlist", nil  %></p></div>
     </span>
     </td>
   </div>
