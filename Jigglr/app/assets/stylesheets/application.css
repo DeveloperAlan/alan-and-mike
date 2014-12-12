@@ -245,11 +245,20 @@ footer ul li {
 }
 
 .cell {
-  max-width: 300px;
-  max-height: 300px;
-  min-height: 300px;
-  min-width: 300px;
-  border-spacing: 10px;
+  max-width: 250px;
+  max-height: 310px;
+  min-height: 310px;
+  min-width: 250px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 10px;
+  border-style: solid;
+  border-color: white;
 }
 
 .myButton {
