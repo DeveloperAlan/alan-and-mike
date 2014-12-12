@@ -100,9 +100,9 @@ a:hover {
   background: transparent;
 }
 
-nav a:hover
+.newnav
 {
-  background: transparent;
+  float: left;
 }
 h1 {
   font-size: 3em;
