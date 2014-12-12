@@ -7,7 +7,7 @@
 <% if user_signed_in? && :search_list?%>
 <p><%= link_to "New Search List", new_search_list_path, class: "btn-lg btn-default" %></p><br>
 <% @searchlists.each do |searchlist| %>
-<p> <%= link_to searchlist.name, searchlist, class: "btn-lg btn-default col-md-2 col-md-offset-1" %></p>
+<p> <%= link_to searchlist.name, searchlist, class: "btn-lg btn-default col-md-3 col-md-offset-1" %></p>
 <% end %>
 <% else %>
 <p>Welcome to Jigglr. Click on Sign up to sign up</p>
