@@ -70,7 +70,7 @@ home_garden.save
 jewellery = Category.create(name: 'Jewellery', eBay_id: "281")
 jewellery.save
 
-music = Category.create(name: 'Video Games', eBay_id: "11233")
+music = Category.create(name: 'Video Games', eBay_id: "1249")
 music.save
 
 musical_instruments = Category.create(name: 'Musical Instruments', eBay_id: "619")
@@ -103,8 +103,6 @@ toys_hobbies.save
 travel = Category.create(name: 'Travel', eBay_id: "3252")
 travel.save
 
-video_games = Category.create(name: 'video_games', eBay_id: "1249")
-video_games.save
 
 User.create({
   email: 'info@example.com',
